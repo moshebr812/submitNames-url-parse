@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Names - Present as list</title>
+    <style>
+        div {
+            background-color: skyblue;
+            margin-bottom: 10px;
+            max-width: 500px;   
+            border: blue solid 1px; 
+        }   
+        label, input {
+            width: 75px;
+            padding-left: 5px;
+        }
+        h4 {
+            color: red;
+            background-color: white;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        input[type=submit]{
+            color: blue;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+        button {
+            color: darkblue;
+            font-style: oblique;
+            font-weight: bold;
+        }  
+        ol, li {
+            font-size: 20px;
+        }  
+    </style>
+</head>
+<body>
+
+    <!-- Section to explain what I am doing -->
+    <div>
+        <h4>Topis in scope</h4>
+        <ol>
+            <li> http.createServer | fs.existsSync | fs readFileSync | fs.writeFileSync </li>
+            <li> fs.unlinkSync = delete file</li>
+            <li> form action="/" method="GET" + input=submit</li>
+            <li> request.url === "/favicon.ico" -->> IGNORE</li>
+            <li> orgString.search ('string-to-search')</li>
+            <li> request.url.search('/favicon.ico')</li>
+            <li> response.writeHead(), response.write(), response.end()</li>
+            <li> orgString.replace (oldSection, newSection)</li>
+        </ol>
+    </div>
+
+    <!-- Section to provide the UI form + all fields -->
+    <div>
+        <h4> Submit user info Via form </h4>
+        <form action="/" method="GET">
+            <label for="">First Name: </label>
+            <input type="text" name="firstName"> <br>
+            <label for="">Last Name: </label>
+            <input type="text" name="lastName"> <br>
+            <label for="">Age: </label>
+            <input type="number" min="15" max="120" value="" name="age"> <br>
+            <label for="">Nick Name: </label>
+            <input type="text" name="nickName"> <br>
+
+            <input type="submit"> 
+            <!-- <input type="button" name=clearFile> -->
+            <button name="clearList" title="clear file and list, then refresh the screen">Clear File</button>
+            <button name="simulateSubmitNames" title="inject 3 names to simualte the flow">Simulate Submit 3 names</button>
+        </form>
+    </div>
+
+        <!-- Section to show list of Users already Submitted -->
+        <div>
+            <h4> Total submitted users: ###TotalSubmittedUsers###</h4>
+            <ol>###FullListOfUsers###
+
+            </ol>
+        </div>
+
+</body>
+</html>

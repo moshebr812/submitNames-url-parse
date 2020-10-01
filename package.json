@@ -1,0 +1,14 @@
+{
+  "name": "submitnames-url-parse",
+  "version": "1.0.0",
+  "description": "form to submit names using url-parse of nmp",
+  "main": "submitNames-url-parse.js",
+  "scripts": {
+    "test": "Hellow 007"
+  },
+  "author": "MB 812",
+  "license": "ISC",
+  "dependencies": {
+    "url-parse": "^1.4.7"
+  }
+}
